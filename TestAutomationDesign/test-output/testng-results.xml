@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-28T22:16:10 CET" name="Default suite" finished-at="2022-12-28T22:16:26 CET" duration-ms="15700">
+    <groups>
+    </groups>
+    <test started-at="2022-12-28T22:16:10 CET" name="Default test" finished-at="2022-12-28T22:16:26 CET" duration-ms="15700">
+      <class name="MW.TestAutomationDesign.Tests.LoginErrorValidation">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:MW.TestAutomationDesign.Tests.LoginErrorValidation@298a5e20]" started-at="2022-12-28T22:16:10 CET" name="launchApplication" finished-at="2022-12-28T22:16:20 CET" duration-ms="9961" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="manuaLoggingInTest()[pri:0, instance:MW.TestAutomationDesign.Tests.LoginErrorValidation@298a5e20]" started-at="2022-12-28T22:16:20 CET" name="manuaLoggingInTest" finished-at="2022-12-28T22:16:26 CET" duration-ms="5645" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- manuaLoggingInTest -->
+      </class> <!-- MW.TestAutomationDesign.Tests.LoginErrorValidation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
