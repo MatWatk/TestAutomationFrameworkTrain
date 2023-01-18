@@ -1,5 +1,11 @@
 package MW.TestAutomationDesign.AbstractComponent;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -40,7 +46,23 @@ List <WebElement> allProductsFromCart;
 		Double preparedPrice = PricePreparation(price);
 		return preparedPrice;
 	}
-	
+	public static List<String> GetLoginInfoFromDatabase(String username) throws SQLException
+	{
+		String host = "localhost";
+		String port = "3306";
+		Connection con = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port +"/FrameworkDB", "root", "test123");
+		Statement s = con.createStatement();
+		ResultSet rs = s.executeQuery("select * from LoginAndPassword where login = '" + username + "'");
+		List<String> loginThings = new ArrayList<String>();
+		while (rs.next())
+		{
+			String loginFromDatabase = rs.getString("login");
+			String passwordFromDatabase = rs.getString("password");
+			loginThings.add(loginFromDatabase);
+			loginThings.add(passwordFromDatabase);
+		}
+		return loginThings;
+	}
 	
 	
 }

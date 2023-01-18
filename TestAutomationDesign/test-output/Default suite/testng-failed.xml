@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MW.TestAutomationDesign.Tests.LoginErrorValidation">
+      <class name="MW.TestAutomationDesign.Tests.OrderTest">
         <methods>
+          <include name="emptyCartCheckoutCheck"/>
           <include name="launchApplication"/>
-          <include name="manuaLoggingInTest"/>
         </methods>
-      </class> <!-- MW.TestAutomationDesign.Tests.LoginErrorValidation -->
+      </class> <!-- MW.TestAutomationDesign.Tests.OrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

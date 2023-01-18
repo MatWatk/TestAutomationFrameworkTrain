@@ -39,15 +39,16 @@ public class StandAloneTest2 {
 		productPage.addToCardSelected(maxPrice);
 
 		// CART PAGE
-		CartPage cartPage = new CartPage(driver);
-		Boolean cartPageCheck = cartPage.CartCheck(maxPrice);
+		CartPage cartPage = productPage.clickOnCart();
+		Boolean cartPageCheck = cartPage.cartCheckWithPriceDeclaration(maxPrice);
 		Assert.assertFalse(cartPageCheck);
-		cartPage.ClickCheckout();
+		cartPage.clickCheckout();
 		
 		// CHECKOUT PAGE
 		
 		CheckoutPage checkoutPage = new CheckoutPage(driver);
-		checkoutPage.FillCheckoutAllFields();
+		checkoutPage.FillCheckoutAllFieldsWithDefinedValues();
+		checkoutPage.clickContinueButton();
 		
 		// CHECHKOUT OVERVIEW PAGE
 		
@@ -69,7 +70,8 @@ public class StandAloneTest2 {
 		ConfirmationPage confirmationPage = new ConfirmationPage(driver);
 		String checkoutMessage = confirmationPage.GetConfirmationMessage();
 		Assert.assertTrue(checkoutMessage.contains("COMPLETE"));
-		abstractComponent.closeBrowser();
+		System.out.println("Everything went well!");
+		driver.quit();
 	}
 
 	
