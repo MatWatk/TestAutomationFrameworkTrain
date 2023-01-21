@@ -116,4 +116,17 @@ public void checkAllBackbuttons()
 	Assert.assertTrue(currentBrowserTitleProductsPageAgain.equalsIgnoreCase("products"));
 }
 
+@Test
+public void checkoutTextboxesCheck()
+{
+	ProductPage productPage = landingPage.loggingIn(1);
+	productPage.addAllToCard();
+	CartPage cartPage = productPage.clickOnCart();
+	CheckoutPage checkoutPage = cartPage.clickCheckout();
+	checkoutPage.changeDatatypesInTextboxes();
+	CheckoutOverviewPage checkoutOverviewPage = checkoutPage.clickContinueButton();
+	Assert.assertFalse(checkoutOverviewPage.getWebsiteTitle().contains("OVERVIEW"));
+	
+}
+
 }

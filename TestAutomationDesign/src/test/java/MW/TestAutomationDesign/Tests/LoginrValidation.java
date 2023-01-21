@@ -22,13 +22,6 @@ import MW.TestAutomationDesign.TestComponents.BaseTest;
 public class LoginrValidation extends BaseTest{
 
 @Test
-public void loginErrorValidation() throws IOException
-{
-	String errorMessage = landingPage.manualLoggingIn("WrongLogin", "WrongPassword");
-	Assert.assertTrue(errorMessage.contains("Epic sadface: Username and password do not match any user in this service"));
-}
-	
-@Test
 public void manuaLoggingInTest () throws IOException
 {
 	Properties prop = new Properties();

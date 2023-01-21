@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="0" failed="1" skipped="0">
+<testng-results ignored="4" total="5" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-18T20:58:08 CET" name="Default suite" finished-at="2023-01-18T20:58:12 CET" duration-ms="3697">
+  <suite started-at="2023-01-21T20:37:41 CET" name="Default suite" finished-at="2023-01-21T20:37:45 CET" duration-ms="3552">
     <groups>
     </groups>
-    <test started-at="2023-01-18T20:58:08 CET" name="Default test" finished-at="2023-01-18T20:58:12 CET" duration-ms="3697">
+    <test started-at="2023-01-21T20:37:41 CET" name="Default test" finished-at="2023-01-21T20:37:45 CET" duration-ms="3552">
       <class name="MW.TestAutomationDesign.Tests.OrderTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:MW.TestAutomationDesign.Tests.OrderTest@f78a47e]" started-at="2023-01-18T20:58:08 CET" name="launchApplication" finished-at="2023-01-18T20:58:11 CET" duration-ms="2858" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:MW.TestAutomationDesign.Tests.OrderTest@644baf4a]" started-at="2023-01-21T20:37:42 CET" name="launchApplication" finished-at="2023-01-21T20:37:44 CET" duration-ms="2313" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="emptyCartCheckoutCheck()[pri:0, instance:MW.TestAutomationDesign.Tests.OrderTest@f78a47e]" started-at="2023-01-18T20:58:11 CET" name="emptyCartCheckoutCheck" finished-at="2023-01-18T20:58:12 CET" duration-ms="791" status="FAIL">
+        <test-method signature="checkoutTextboxesCheck()[pri:0, instance:MW.TestAutomationDesign.Tests.OrderTest@644baf4a]" started-at="2023-01-21T20:37:44 CET" name="checkoutTextboxesCheck" finished-at="2023-01-21T20:37:45 CET" duration-ms="1187" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [false] but found [true]]]>
@@ -22,7 +22,7 @@ at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1413)
 at org.testng.Assert.assertFalse(Assert.java:78)
 at org.testng.Assert.assertFalse(Assert.java:88)
-at MW.TestAutomationDesign.Tests.OrderTest.emptyCartCheckoutCheck(OrderTest.java:88)
+at MW.TestAutomationDesign.Tests.OrderTest.checkoutTextboxesCheck(OrderTest.java:128)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -56,7 +56,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- emptyCartCheckoutCheck -->
+        </test-method> <!-- checkoutTextboxesCheck -->
       </class> <!-- MW.TestAutomationDesign.Tests.OrderTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

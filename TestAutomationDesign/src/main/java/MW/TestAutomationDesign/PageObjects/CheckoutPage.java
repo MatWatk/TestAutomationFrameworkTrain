@@ -29,6 +29,9 @@ WebElement checkoutPageTitle;
 @FindBy (id="cancel")
 WebElement cancelButton;
 
+@FindBy (tagName="h3")
+WebElement errorMessage;
+
 	public CheckoutPage(WebDriver driver)
 	{
 		super(driver);
@@ -57,5 +60,17 @@ WebElement cancelButton;
 	public void clickCancelButton()
 	{
 		cancelButton.click();
+	}
+	public String checkEmptyTextboxes()
+	{
+		continueButton.click();
+		String message = errorMessage.getText();
+		return message;
+	}
+	public void changeDatatypesInTextboxes()
+	{
+		firstName.sendKeys("123");
+		lastName.sendKeys("123");
+		postCode.sendKeys("Abcd");
 	}
 }

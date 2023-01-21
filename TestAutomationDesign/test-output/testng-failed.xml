@@ -5,8 +5,8 @@
     <classes>
       <class name="MW.TestAutomationDesign.Tests.OrderTest">
         <methods>
-          <include name="emptyCartCheckoutCheck"/>
           <include name="launchApplication"/>
+          <include name="checkoutTextboxesCheck"/>
         </methods>
       </class> <!-- MW.TestAutomationDesign.Tests.OrderTest -->
     </classes>

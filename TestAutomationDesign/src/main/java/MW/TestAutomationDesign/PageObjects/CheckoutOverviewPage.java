@@ -25,6 +25,9 @@ WebElement finishButtonPath;
 @FindBy (id="cancel")
 WebElement cancelButton;
 
+@FindBy (id="root")
+WebElement websiteTitle;
+
 	public CheckoutOverviewPage(WebDriver driver)
 	{
 		super(driver);
@@ -60,5 +63,10 @@ WebElement cancelButton;
 	public void clickCancelButton()
 	{
 		cancelButton.click();
+	}
+	
+	public String getWebsiteTitle()
+	{
+		return(websiteTitle.getText());
 	}
 }
