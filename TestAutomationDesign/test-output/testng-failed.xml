@@ -6,7 +6,7 @@
       <class name="MW.TestAutomationDesign.Tests.OrderTest">
         <methods>
           <include name="launchApplication"/>
-          <include name="checkoutTextboxesCheck"/>
+          <include name="checkoutTexboxesFullCheck"/>
         </methods>
       </class> <!-- MW.TestAutomationDesign.Tests.OrderTest -->
     </classes>

@@ -129,4 +129,32 @@ public void checkoutTextboxesCheck()
 	
 }
 
+@Test
+public void checkoutTexboxesFullCheck() throws InterruptedException
+{
+	ProductPage productPage = landingPage.loggingIn(1);
+	productPage.addAllToCard();
+	CartPage cartPage = productPage.clickOnCart();
+	CheckoutPage checkoutPage = cartPage.clickCheckout();
+	List<Integer> arrayContainingTestedDataTypes = checkoutPage.textboxesFullCheck();
+	for (int arrayNumber = 0; arrayNumber<arrayContainingTestedDataTypes.size(); arrayNumber++)
+	{
+		double sortingVar = arrayNumber % 3;
+		System.out.println(sortingVar);
+		if (sortingVar == 0)
+		{
+			System.out.println("****************");
+		}
+		int dataTypeNumber = arrayContainingTestedDataTypes.get(arrayNumber);	
+		if (dataTypeNumber == 1)
+		{
+			System.out.println("filled by number");
+		}
+		else 
+		{
+			System.out.println("filled by text");
+		}
+	}
+}
+
 }

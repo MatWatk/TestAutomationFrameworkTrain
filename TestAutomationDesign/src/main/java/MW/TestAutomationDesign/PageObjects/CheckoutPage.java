@@ -1,5 +1,8 @@
 package MW.TestAutomationDesign.PageObjects;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -72,5 +75,52 @@ WebElement errorMessage;
 		firstName.sendKeys("123");
 		lastName.sendKeys("123");
 		postCode.sendKeys("Abcd");
+	}
+	public List<Integer> textboxesFullCheck() throws InterruptedException
+	{
+		List<String> dataTypesForTextboxes = new ArrayList<String>();
+		List<Integer> dataTypesWhichWebsiteAccepted = new ArrayList<Integer>();
+		dataTypesForTextboxes.add("123");
+		dataTypesForTextboxes.add("abc");
+		CheckoutOverviewPage checkoutOverviewPage = clickContinueButton();
+		ProductPage productPage = new ProductPage(driver);
+		CartPage cartPage = new CartPage(driver);
+		if (errorMessage.getText().isEmpty())
+		{
+			System.out.println("do sth when error doesnt appear - it should appear");
+		}
+		else
+		{
+			for (int i=0; i<=1; i++)
+			{
+
+				//Thread.sleep(1000);
+				for (int j=0; j<=1; j++)
+				{
+
+					//Thread.sleep(1000);
+					for (int k=0; k<=1; k++)
+					{
+						firstName.sendKeys(dataTypesForTextboxes.get(i));
+						lastName.sendKeys(dataTypesForTextboxes.get(j));
+						postCode.sendKeys(dataTypesForTextboxes.get(k));
+						Thread.sleep(1000);
+						continueButton.click();
+						String websiteTitle = checkoutOverviewPage.getWebsiteTitle();
+						if (websiteTitle.contains("OVERVIEW"))
+						{
+						dataTypesWhichWebsiteAccepted.add(i);
+						dataTypesWhichWebsiteAccepted.add(j);
+						dataTypesWhichWebsiteAccepted.add(k);
+						checkoutOverviewPage.clickCancelButton();
+						productPage.clickOnCart();
+						cartPage.clickCheckout();
+						//Thread.sleep(1000);
+						}											
+					}
+				}
+			}
+		}
+		return dataTypesWhichWebsiteAccepted;
 	}
 }
