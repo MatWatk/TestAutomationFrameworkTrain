@@ -76,6 +76,11 @@ WebElement errorMessage;
 		lastName.sendKeys("123");
 		postCode.sendKeys("Abcd");
 	}
+	public int getNumberOfInputs()
+	{
+		List<WebElement> allInputsFromPage = driver.findElements(By.xpath("//div[@class='checkout_info']/div/input"));
+		return allInputsFromPage.size();
+	}
 	public List<Integer> textboxesFullCheck() throws InterruptedException
 	{
 		List<String> dataTypesForTextboxes = new ArrayList<String>();
@@ -93,12 +98,8 @@ WebElement errorMessage;
 		{
 			for (int i=0; i<=1; i++)
 			{
-
-				//Thread.sleep(1000);
 				for (int j=0; j<=1; j++)
 				{
-
-					//Thread.sleep(1000);
 					for (int k=0; k<=1; k++)
 					{
 						firstName.sendKeys(dataTypesForTextboxes.get(i));

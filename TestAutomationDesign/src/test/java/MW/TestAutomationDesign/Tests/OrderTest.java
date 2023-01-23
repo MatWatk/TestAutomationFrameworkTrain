@@ -1,10 +1,14 @@
 package MW.TestAutomationDesign.Tests;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import com.google.common.collect.Lists;
+
 import MW.TestAutomationDesign.AbstractComponent.AbstractComponent;
 import MW.TestAutomationDesign.PageObjects.CartPage;
 import MW.TestAutomationDesign.PageObjects.CheckoutOverviewPage;
@@ -136,23 +140,38 @@ public void checkoutTexboxesFullCheck() throws InterruptedException
 	productPage.addAllToCard();
 	CartPage cartPage = productPage.clickOnCart();
 	CheckoutPage checkoutPage = cartPage.clickCheckout();
+	int numberOfInputsOnCheckoutPage = checkoutPage.getNumberOfInputs();
+	double numberOfDataCombinations = Math.pow(2, numberOfInputsOnCheckoutPage);
 	List<Integer> arrayContainingTestedDataTypes = checkoutPage.textboxesFullCheck();
+	List<String> convertedTestedDataTypes = new ArrayList<String>();
+
 	for (int arrayNumber = 0; arrayNumber<arrayContainingTestedDataTypes.size(); arrayNumber++)
 	{
-		double sortingVar = arrayNumber % 3;
-		System.out.println(sortingVar);
-		if (sortingVar == 0)
+		if(arrayContainingTestedDataTypes.get(arrayNumber) == 0)
+			{
+			convertedTestedDataTypes.add("Numbers");
+			}
+		else
 		{
-			System.out.println("****************");
+			convertedTestedDataTypes.add("Letters");
 		}
-		int dataTypeNumber = arrayContainingTestedDataTypes.get(arrayNumber);	
-		if (dataTypeNumber == 1)
+	}
+	List<List<String>> dataTypedInTextboxesPackages = Lists.partition(convertedTestedDataTypes, 3);
+	for (int dataPackage = 0; dataPackage<numberOfDataCombinations; dataPackage++)
+	{
+		System.out.println("Provided data to analysis:");
+		System.out.println(dataTypedInTextboxesPackages.get(dataPackage));
+		if (dataTypedInTextboxesPackages.get(dataPackage).get(0)=="Numbers")
 		{
-			System.out.println("filled by number");
+			System.out.println("Error in package number " + dataPackage + "." + "The website shouldn't accept this package, but accepted. Name shoudn't contain numbers");
 		}
-		else 
+		if (dataTypedInTextboxesPackages.get(dataPackage).get(1)=="Numbers")
 		{
-			System.out.println("filled by text");
+			System.out.println("Error in package number " + dataPackage + "." + "The website shouldn't accept this package, but accepted. Last name shoudn't contain numbers");
+		}
+		if (dataTypedInTextboxesPackages.get(dataPackage).get(2)=="Letters")
+		{
+			System.out.println("Error in package number " + dataPackage + "." + "The website shouldn't accept this package, but accepted. Post code shoudn't contain letters");
 		}
 	}
 }
