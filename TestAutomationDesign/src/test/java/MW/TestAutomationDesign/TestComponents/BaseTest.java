@@ -32,6 +32,7 @@ public static LandingPage landingPage;
 		}
 		else if (browserName.equalsIgnoreCase("edge"))
 		{
+			//Update direction of Edge Driver to your own path
 			System.setProperty("webdriver.edge.driver", "C:\\Users\\User\\Desktop\\Programowanie\\edgedriver_win64\\msedgedriver.exe");
 			driver = new EdgeDriver();
 		}

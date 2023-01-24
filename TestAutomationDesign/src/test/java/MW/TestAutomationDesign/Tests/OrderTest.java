@@ -6,6 +6,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.google.common.collect.Lists;
 
@@ -136,6 +137,7 @@ public void checkoutTextboxesCheck()
 @Test
 public void checkoutTexboxesFullCheck() throws InterruptedException
 {
+	SoftAssert softAssert = new SoftAssert();
 	ProductPage productPage = landingPage.loggingIn(1);
 	productPage.addAllToCard();
 	CartPage cartPage = productPage.clickOnCart();
@@ -144,7 +146,8 @@ public void checkoutTexboxesFullCheck() throws InterruptedException
 	double numberOfDataCombinations = Math.pow(2, numberOfInputsOnCheckoutPage);
 	List<Integer> arrayContainingTestedDataTypes = checkoutPage.textboxesFullCheck();
 	List<String> convertedTestedDataTypes = new ArrayList<String>();
-
+	int testNumber = 1;
+	int assertion = 0;
 	for (int arrayNumber = 0; arrayNumber<arrayContainingTestedDataTypes.size(); arrayNumber++)
 	{
 		if(arrayContainingTestedDataTypes.get(arrayNumber) == 0)
@@ -159,20 +162,32 @@ public void checkoutTexboxesFullCheck() throws InterruptedException
 	List<List<String>> dataTypedInTextboxesPackages = Lists.partition(convertedTestedDataTypes, 3);
 	for (int dataPackage = 0; dataPackage<numberOfDataCombinations; dataPackage++)
 	{
+		System.out.println("Test nr " + testNumber + ".");
 		System.out.println("Provided data to analysis:");
 		System.out.println(dataTypedInTextboxesPackages.get(dataPackage));
 		if (dataTypedInTextboxesPackages.get(dataPackage).get(0)=="Numbers")
 		{
-			System.out.println("Error in package number " + dataPackage + "." + "The website shouldn't accept this package, but accepted. Name shoudn't contain numbers");
+			System.out.println("Error in package number " + dataPackage + " the website shouldn't accept this package, but accepted. FIRST NAME shoudn't contain numbers");
+			softAssert.assertTrue(false);
+			assertion ++;
 		}
 		if (dataTypedInTextboxesPackages.get(dataPackage).get(1)=="Numbers")
 		{
-			System.out.println("Error in package number " + dataPackage + "." + "The website shouldn't accept this package, but accepted. Last name shoudn't contain numbers");
+			System.out.println("Error in package number " + dataPackage + " the website shouldn't accept this package, but accepted. LAST NAME shoudn't contain numbers");
+			softAssert.assertTrue(false);
+			assertion ++;
 		}
 		if (dataTypedInTextboxesPackages.get(dataPackage).get(2)=="Letters")
 		{
-			System.out.println("Error in package number " + dataPackage + "." + "The website shouldn't accept this package, but accepted. Post code shoudn't contain letters");
+			System.out.println("Error in package number " + dataPackage + "the website shouldn't accept this package, but accepted. POST CODE shoudn't contain letters");
+			softAssert.assertTrue(false);
+			assertion ++;
 		}
+	testNumber++;
+	}
+	if (assertion>0)
+	{
+		Assert.assertTrue(false);
 	}
 }
 

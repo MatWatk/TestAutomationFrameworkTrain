@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-23T22:37:11 CET" name="Default suite" finished-at="2023-01-23T22:37:26 CET" duration-ms="14768">
+  <suite started-at="2023-01-24T22:10:39 CET" name="Default suite" finished-at="2023-01-24T22:10:43 CET" duration-ms="4418">
     <groups>
     </groups>
-    <test started-at="2023-01-23T22:37:11 CET" name="Default test" finished-at="2023-01-23T22:37:26 CET" duration-ms="14768">
-      <class name="MW.TestAutomationDesign.Tests.OrderTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:MW.TestAutomationDesign.Tests.OrderTest@7526515b]" started-at="2023-01-23T22:37:11 CET" name="launchApplication" finished-at="2023-01-23T22:37:13 CET" duration-ms="2244" status="PASS">
+    <test started-at="2023-01-24T22:10:39 CET" name="Default test" finished-at="2023-01-24T22:10:43 CET" duration-ms="4418">
+      <class name="MW.TestAutomationDesign.Tests.DevToolsTests">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:MW.TestAutomationDesign.Tests.DevToolsTests@f0c8a99]" started-at="2023-01-24T22:10:39 CET" name="launchApplication" finished-at="2023-01-24T22:10:42 CET" duration-ms="3354" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="checkoutTexboxesFullCheck()[pri:0, instance:MW.TestAutomationDesign.Tests.OrderTest@7526515b]" started-at="2023-01-23T22:37:13 CET" name="checkoutTexboxesFullCheck" finished-at="2023-01-23T22:37:26 CET" duration-ms="12474" status="PASS">
+        <test-method signature="websiteOnDifferentDeviceSizes()[pri:0, instance:MW.TestAutomationDesign.Tests.DevToolsTests@f0c8a99]" started-at="2023-01-24T22:10:42 CET" name="websiteOnDifferentDeviceSizes" finished-at="2023-01-24T22:10:43 CET" duration-ms="1015" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkoutTexboxesFullCheck -->
-      </class> <!-- MW.TestAutomationDesign.Tests.OrderTest -->
+        </test-method> <!-- websiteOnDifferentDeviceSizes -->
+      </class> <!-- MW.TestAutomationDesign.Tests.DevToolsTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

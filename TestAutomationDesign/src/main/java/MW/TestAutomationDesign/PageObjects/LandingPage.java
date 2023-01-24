@@ -1,8 +1,12 @@
 package MW.TestAutomationDesign.PageObjects;
 
+import java.util.Optional;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.v108.emulation.Emulation;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -79,7 +83,11 @@ public class LandingPage extends AbstractComponent{
 			String success = "success";
 			return success;
 		}
-		
 	}
-	
+	public void phoneVersion()
+	{
+		DevTools devTools = prepareDevTools();
+		devTools.send(Emulation.setDeviceMetricsOverride(400, 634, 100, true, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty()));
+		goTo();
+	}
 }

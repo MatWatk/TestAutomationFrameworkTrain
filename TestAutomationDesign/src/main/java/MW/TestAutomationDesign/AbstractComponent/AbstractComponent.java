@@ -1,5 +1,7 @@
 package MW.TestAutomationDesign.AbstractComponent;
 
+import java.io.File;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -7,12 +9,21 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.v108.emulation.Emulation;
 import org.openqa.selenium.support.FindBy;
+
+import MW.TestAutomationDesign.PageObjects.LandingPage;
 
 public class AbstractComponent {
 WebDriver driver;
@@ -63,6 +74,16 @@ List <WebElement> allProductsFromCart;
 		}
 		return loginThings;
 	}
-	
-	
+	public DevTools prepareDevTools()
+	{
+		ChromeDriver driverDevTools = new ChromeDriver();
+		DevTools devTools = driverDevTools.getDevTools();
+		devTools.createSession();
+		return devTools;
+	}
+	public void takeScreenshot() throws IOException
+	{
+		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File("C://Users//mateu//eclipse-workspace//GitDemo//TestAutomationDesign//screenshot_mobile//mobile_version_screenshot.png"));
+	}
 }
