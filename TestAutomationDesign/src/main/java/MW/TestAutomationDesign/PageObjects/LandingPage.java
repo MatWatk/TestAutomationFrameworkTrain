@@ -3,6 +3,7 @@ package MW.TestAutomationDesign.PageObjects;
 import java.util.Optional;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.DevTools;
@@ -39,7 +40,16 @@ public class LandingPage extends AbstractComponent{
 	WebElement loginButton;
 	
 	@FindBy(xpath="//h3")
-	WebElement manualLoggingInMessage;
+	WebElement errorMessage;
+	
+	@FindBy(id="react-burger-menu-btn")
+	WebElement menuBar;
+	
+	@FindBy(id="logout_sidebar_link")
+	WebElement logoutButton;
+	
+	@FindBy(xpath="//span[@class='title']")
+	WebElement websiteTitle;
 	
 	public void goTo()
 	{
@@ -75,7 +85,7 @@ public class LandingPage extends AbstractComponent{
 		loginButton.click();
 		try 
 		{
-			String loginMessage = manualLoggingInMessage.getText();
+			String loginMessage = errorMessage.getText();
 			return loginMessage;
 		}
 		catch (Exception e)
@@ -89,5 +99,26 @@ public class LandingPage extends AbstractComponent{
 		DevTools devTools = prepareDevTools();
 		devTools.send(Emulation.setDeviceMetricsOverride(400, 634, 100, true, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty()));
 		goTo();
+	}
+	public void logout() throws InterruptedException
+	{
+		menuBar.click();
+		//Add explicit wait - when visible
+		Thread.sleep(500);
+		logoutButton.click();
+	}
+	public String checkLoggingOnBlockedUser()
+	{
+		loggingIn(2);
+		String loginMessage = errorMessage.getText();
+		loginWindow.sendKeys(Keys.CONTROL + "a");
+		loginWindow.sendKeys(Keys.DELETE);
+		passwordWindow.sendKeys(Keys.CONTROL + "a");
+		passwordWindow.sendKeys(Keys.DELETE);
+		return loginMessage;
+	}
+	public String getPageTitle()
+	{
+		return (websiteTitle.getText());
 	}
 }

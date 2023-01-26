@@ -11,7 +11,7 @@ import MW.TestAutomationDesign.TestComponents.BaseTest;
 public class DevToolsTests extends BaseTest{
 
 	@Test
-	public void websiteOnDifferentDeviceSizes() throws IOException
+	public void websiteOnDifferentDeviceSize() throws IOException
 	{
 		// AFTER SORTING ALL TESTS EXCLUDE THIS TEST FROM @BEFORE TEST IN XML FILE!!!!!!!!
 		LandingPage landingPage = new LandingPage(driver);

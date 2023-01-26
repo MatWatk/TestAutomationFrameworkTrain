@@ -25,7 +25,7 @@ WebElement finishButtonPath;
 @FindBy (id="cancel")
 WebElement cancelButton;
 
-@FindBy (id="root")
+@FindBy (xpath="//div/span")
 WebElement websiteTitle;
 
 	public CheckoutOverviewPage(WebDriver driver)

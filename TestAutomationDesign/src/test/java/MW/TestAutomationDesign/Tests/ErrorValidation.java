@@ -16,6 +16,7 @@ public class ErrorValidation extends BaseTest
 	{
 		String errorMessage = landingPage.manualLoggingIn("WrongLogin", "WrongPassword");
 		Assert.assertTrue(errorMessage.contains("Epic sadface: Username and password do not match any user in this service"));
+		
 	}
 	
 	@Test

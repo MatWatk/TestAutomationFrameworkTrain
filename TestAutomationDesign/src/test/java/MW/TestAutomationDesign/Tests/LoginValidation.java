@@ -17,9 +17,10 @@ import org.testng.annotations.Test;
 
 import MW.TestAutomationDesign.AbstractComponent.AbstractComponent;
 import MW.TestAutomationDesign.PageObjects.LandingPage;
+import MW.TestAutomationDesign.PageObjects.ProductPage;
 import MW.TestAutomationDesign.TestComponents.BaseTest;
 
-public class LoginrValidation extends BaseTest{
+public class LoginValidation extends BaseTest{
 
 @Test
 public void manuaLoggingInTest () throws IOException
@@ -45,6 +46,26 @@ public static void LogOnSelectedUserFromDatabase() throws SQLException, IOExcept
 	AbstractComponent abstractComponent = new AbstractComponent(driver);
 	List<String> loginAndPassword = abstractComponent.GetLoginInfoFromDatabase(loginFromDatabase);
 	landingPage.manualLoggingIn(loginAndPassword.get(0), loginAndPassword.get(1));
+}
+
+@Test
+public static void LogOnAllUsers() throws InterruptedException
+{
+	ProductPage productPage = landingPage.loggingIn(1);
+	String pageTitleStandardUser = landingPage.getPageTitle();
+	Assert.assertTrue(pageTitleStandardUser.equalsIgnoreCase("products"));
+	landingPage.logout();
+	String blockedUserMessage = landingPage.checkLoggingOnBlockedUser();
+	Assert.assertTrue(blockedUserMessage.contains("locked"));
+	landingPage.loggingIn(3);
+	String pageTitleProbUserTest = landingPage.getPageTitle();
+	Assert.assertTrue(pageTitleProbUserTest.equalsIgnoreCase("products"));
+	landingPage.logout();
+	landingPage.loggingIn(4);
+	String pageTitlePerfbUserTest = landingPage.getPageTitle();
+	Assert.assertTrue(pageTitlePerfbUserTest.equalsIgnoreCase("products"));
+	landingPage.logout();
+	
 }
 }
 

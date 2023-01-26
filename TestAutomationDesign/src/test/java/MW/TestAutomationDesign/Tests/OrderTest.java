@@ -122,7 +122,7 @@ public void checkAllBackbuttons()
 }
 
 @Test
-public void checkoutTextboxesCheck()
+public void checkoutTextboxesBasicCheck()
 {
 	ProductPage productPage = landingPage.loggingIn(1);
 	productPage.addAllToCard();
