@@ -3,10 +3,9 @@
 <suite name="SauceDemoTest">
   <test thread-count="5" name="OrderTest">
     <classes>
-      <class name="MW.TestAutomationDesign.Tests.LoginValidation"/>
+
       <class name="MW.TestAutomationDesign.Tests.DevToolsTests"/>
-      <class name="MW.TestAutomationDesign.Tests.OrderTest"/>
-      <class name="MW.TestAutomationDesign.Tests.ErrorValidation"/>
+
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -19,7 +19,9 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.HasDevTools;
 import org.openqa.selenium.devtools.v108.emulation.Emulation;
 import org.openqa.selenium.support.FindBy;
 
@@ -74,16 +76,21 @@ List <WebElement> allProductsFromCart;
 		}
 		return loginThings;
 	}
-	public DevTools prepareDevTools()
+
+	public ChromeDriver initDriverDev()
 	{
-		ChromeDriver driverDevTools = new ChromeDriver();
-		DevTools devTools = driverDevTools.getDevTools();
-		devTools.createSession();
-		return devTools;
+		ChromeDriver driverDev = new ChromeDriver();
+		return driverDev;
 	}
-	public void takeScreenshot() throws IOException
+	public void takescreenshotOnMobileVersion(ChromeDriver driverDev) throws IOException
 	{
-		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		DevTools devTools = driverDev.getDevTools();
+		devTools.createSession();
+		driverDev.get("https://www.saucedemo.com/");
+		devTools.send(Emulation.setDeviceMetricsOverride(400, 634, 100, true, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty()));
+		File src = ((TakesScreenshot)driverDev).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(src, new File("C://Users//mateu//eclipse-workspace//GitDemo//TestAutomationDesign//screenshot_mobile//mobile_version_screenshot.png"));
+		devTools.close();
+		driverDev.close();
 	}
 }

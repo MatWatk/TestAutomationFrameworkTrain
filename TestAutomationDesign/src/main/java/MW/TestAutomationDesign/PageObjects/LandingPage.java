@@ -94,12 +94,7 @@ public class LandingPage extends AbstractComponent{
 			return success;
 		}
 	}
-	public void phoneVersion()
-	{
-		DevTools devTools = prepareDevTools();
-		devTools.send(Emulation.setDeviceMetricsOverride(400, 634, 100, true, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty()));
-		goTo();
-	}
+
 	public void logout() throws InterruptedException
 	{
 		menuBar.click();

@@ -7,6 +7,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -36,6 +37,7 @@ public static LandingPage landingPage;
 			System.setProperty("webdriver.edge.driver", "C:\\Users\\User\\Desktop\\Programowanie\\edgedriver_win64\\msedgedriver.exe");
 			driver = new EdgeDriver();
 		}
+
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().window().maximize();
 		return driver;
@@ -50,7 +52,7 @@ public static LandingPage landingPage;
 		return landingPage;
 	}
 	
-	//@AfterMethod
+	@AfterMethod
 	public void closingBrowser()
 	{
 		driver.close();

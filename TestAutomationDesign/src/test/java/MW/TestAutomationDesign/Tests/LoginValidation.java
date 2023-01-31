@@ -49,7 +49,7 @@ public static void LogOnSelectedUserFromDatabase() throws SQLException, IOExcept
 }
 
 @Test
-public static void LogOnAllUsers() throws InterruptedException
+public static void logOnAllUsers() throws InterruptedException
 {
 	ProductPage productPage = landingPage.loggingIn(1);
 	String pageTitleStandardUser = landingPage.getPageTitle();
