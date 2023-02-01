@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MW.TestAutomationDesign.Tests.DevToolsTests">
+      <class name="MW.TestAutomationDesign.Tests.OrderTest">
         <methods>
-          <include name="websiteOnDifferentDeviceSize"/>
+          <include name="launchApplication"/>
+          <include name="cartCheck"/>
+          <include name="closingBrowser"/>
         </methods>
-      </class> <!-- MW.TestAutomationDesign.Tests.DevToolsTests -->
+      </class> <!-- MW.TestAutomationDesign.Tests.OrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

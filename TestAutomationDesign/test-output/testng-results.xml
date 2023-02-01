@@ -1,25 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="9" total="12" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-31T12:02:57 CET" name="Default suite" finished-at="2023-01-31T12:03:17 CET" duration-ms="19849">
+  <suite started-at="2023-02-01T08:04:17 CET" name="Suited" finished-at="2023-02-01T08:05:14 CET" duration-ms="56519">
     <groups>
+      <group name="GeneralTest">
+        <method signature="LoginValidation.logOnAllUsers()[pri:0, instance:MW.TestAutomationDesign.Tests.LoginValidation@221a3fa4]" name="logOnAllUsers" class="MW.TestAutomationDesign.Tests.LoginValidation"/>
+      </group> <!-- GeneralTest -->
+      <group name="LoggingIn">
+        <method signature="LoginValidation.LogOnSelectedUserFromDatabase()[pri:0, instance:MW.TestAutomationDesign.Tests.LoginValidation@221a3fa4]" name="LogOnSelectedUserFromDatabase" class="MW.TestAutomationDesign.Tests.LoginValidation"/>
+        <method signature="LoginValidation.logOnAllUsers()[pri:0, instance:MW.TestAutomationDesign.Tests.LoginValidation@221a3fa4]" name="logOnAllUsers" class="MW.TestAutomationDesign.Tests.LoginValidation"/>
+        <method signature="LoginValidation.manuaLoggingInTest()[pri:0, instance:MW.TestAutomationDesign.Tests.LoginValidation@221a3fa4]" name="manuaLoggingInTest" class="MW.TestAutomationDesign.Tests.LoginValidation"/>
+      </group> <!-- LoggingIn -->
     </groups>
-    <test started-at="2023-01-31T12:02:57 CET" name="Default test" finished-at="2023-01-31T12:03:17 CET" duration-ms="19849">
-      <class name="MW.TestAutomationDesign.Tests.DevToolsTests">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:MW.TestAutomationDesign.Tests.DevToolsTests@26d9b808]" started-at="2023-01-31T12:02:57 CET" name="launchApplication" finished-at="2023-01-31T12:03:00 CET" duration-ms="2287" status="PASS">
+    <test started-at="2023-02-01T08:04:17 CET" name="Testd" finished-at="2023-02-01T08:05:14 CET" duration-ms="56519">
+      <class name="MW.TestAutomationDesign.Tests.LoginValidation">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:MW.TestAutomationDesign.Tests.LoginValidation@221a3fa4]" started-at="2023-02-01T08:04:17 CET" name="launchApplication" finished-at="2023-02-01T08:04:20 CET" duration-ms="2273" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="websiteOnDifferentDeviceSize()[pri:0, instance:MW.TestAutomationDesign.Tests.DevToolsTests@26d9b808]" started-at="2023-01-31T12:03:00 CET" name="websiteOnDifferentDeviceSize" finished-at="2023-01-31T12:03:01 CET" duration-ms="1245" status="PASS">
+        <test-method signature="LogOnSelectedUserFromDatabase()[pri:0, instance:MW.TestAutomationDesign.Tests.LoginValidation@221a3fa4]" started-at="2023-02-01T08:04:20 CET" name="LogOnSelectedUserFromDatabase" finished-at="2023-02-01T08:04:25 CET" duration-ms="5609" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- websiteOnDifferentDeviceSize -->
-        <test-method is-config="true" signature="closingBrowser()[pri:0, instance:MW.TestAutomationDesign.Tests.DevToolsTests@26d9b808]" started-at="2023-01-31T12:03:01 CET" name="closingBrowser" finished-at="2023-01-31T12:03:17 CET" duration-ms="16263" status="PASS">
+        </test-method> <!-- LogOnSelectedUserFromDatabase -->
+        <test-method is-config="true" signature="closingBrowser()[pri:0, instance:MW.TestAutomationDesign.Tests.LoginValidation@221a3fa4]" started-at="2023-02-01T08:04:25 CET" name="closingBrowser" finished-at="2023-02-01T08:04:41 CET" duration-ms="16261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingBrowser -->
-      </class> <!-- MW.TestAutomationDesign.Tests.DevToolsTests -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:MW.TestAutomationDesign.Tests.LoginValidation@221a3fa4]" started-at="2023-02-01T08:04:41 CET" name="launchApplication" finished-at="2023-02-01T08:04:43 CET" duration-ms="1266" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="logOnAllUsers()[pri:0, instance:MW.TestAutomationDesign.Tests.LoginValidation@221a3fa4]" started-at="2023-02-01T08:04:43 CET" name="logOnAllUsers" finished-at="2023-02-01T08:04:51 CET" duration-ms="8176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOnAllUsers -->
+        <test-method is-config="true" signature="closingBrowser()[pri:0, instance:MW.TestAutomationDesign.Tests.LoginValidation@221a3fa4]" started-at="2023-02-01T08:04:51 CET" name="closingBrowser" finished-at="2023-02-01T08:05:07 CET" duration-ms="16249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingBrowser -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:MW.TestAutomationDesign.Tests.LoginValidation@221a3fa4]" started-at="2023-02-01T08:05:07 CET" name="launchApplication" finished-at="2023-02-01T08:05:08 CET" duration-ms="1131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="manuaLoggingInTest()[pri:0, instance:MW.TestAutomationDesign.Tests.LoginValidation@221a3fa4]" started-at="2023-02-01T08:05:08 CET" name="manuaLoggingInTest" finished-at="2023-02-01T08:05:14 CET" duration-ms="5349" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- manuaLoggingInTest -->
+        <test-method is-config="true" signature="closingBrowser()[pri:0, instance:MW.TestAutomationDesign.Tests.LoginValidation@221a3fa4]" started-at="2023-02-01T08:05:14 CET" name="closingBrowser" finished-at="2023-02-01T08:05:14 CET" duration-ms="133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingBrowser -->
+      </class> <!-- MW.TestAutomationDesign.Tests.LoginValidation -->
+    </test> <!-- Testd -->
+  </suite> <!-- Suited -->
 </testng-results>

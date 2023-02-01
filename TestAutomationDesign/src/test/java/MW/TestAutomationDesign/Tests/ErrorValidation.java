@@ -11,7 +11,7 @@ import MW.TestAutomationDesign.TestComponents.BaseTest;
 public class ErrorValidation extends BaseTest
 {
 
-	@Test
+	@Test(groups= {"ErrorValidation", "GeneralTest"})
 	public void loginErrorValidation() 
 	{
 		String errorMessage = landingPage.manualLoggingIn("WrongLogin", "WrongPassword");
@@ -19,7 +19,7 @@ public class ErrorValidation extends BaseTest
 		
 	}
 	
-	@Test
+	@Test(groups= {"Textboxes", "ErrorValidation", "GeneralTest"})
 	public void emptyCheckoutCheck()
 	{
 		ProductPage productPage = landingPage.loggingIn(1);

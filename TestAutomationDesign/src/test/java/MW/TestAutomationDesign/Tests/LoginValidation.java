@@ -22,7 +22,7 @@ import MW.TestAutomationDesign.TestComponents.BaseTest;
 
 public class LoginValidation extends BaseTest{
 
-@Test
+@Test(groups= {"LoggingIn"})
 public void manuaLoggingInTest () throws IOException
 {
 	Properties prop = new Properties();
@@ -35,7 +35,7 @@ public void manuaLoggingInTest () throws IOException
 	landingPage.manualLoggingIn(manualLogin, manualPassword);
 }
 
-@Test
+@Test(groups= {"LoggingIn"})
 public static void LogOnSelectedUserFromDatabase() throws SQLException, IOException
 {
 	Properties prop = new Properties();
@@ -48,7 +48,7 @@ public static void LogOnSelectedUserFromDatabase() throws SQLException, IOExcept
 	landingPage.manualLoggingIn(loginAndPassword.get(0), loginAndPassword.get(1));
 }
 
-@Test
+@Test(groups= {"LoggingIn", "GeneralTest"})
 public static void logOnAllUsers() throws InterruptedException
 {
 	ProductPage productPage = landingPage.loggingIn(1);

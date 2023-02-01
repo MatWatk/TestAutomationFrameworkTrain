@@ -14,7 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DevToolsTests extends BaseTest{
 
-	@Test
+	@Test(groups= {"DevTools", "GeneralTest"})
 	public void websiteOnDifferentDeviceSize() throws IOException
 	{
 		//Need to write it in a better way! For now for the raport it will work.

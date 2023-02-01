@@ -20,7 +20,7 @@ import MW.TestAutomationDesign.PageObjects.ProductPage;
 import MW.TestAutomationDesign.TestComponents.BaseTest;
 
 public class OrderTest extends BaseTest{
-@Test
+@Test(groups= {"Orders", "GeneralTest"})
 	public void orderTest() throws IOException 
 	{
 		int maxPrice = 10;
@@ -59,7 +59,7 @@ public class OrderTest extends BaseTest{
 		Assert.assertTrue(checkoutMessage.contains("COMPLETE"));
 	}
 
-@Test
+@Test(groups= {"Orders", "GeneralTest"})
 public void cartCheck()
 {
 	ProductPage productPage = landingPage.loggingIn(1);
@@ -80,7 +80,7 @@ public void cartCheck()
 		
 }
 
-@Test
+@Test(groups= {"Orders", "GeneralTest"})
 public void emptyCartCheckoutCheck()
 {
 	ProductPage productPage = landingPage.loggingIn(1);
@@ -93,7 +93,7 @@ public void emptyCartCheckoutCheck()
 	Assert.assertFalse(currentPageName.contains("CHECKOUT"));
 }
 
-@Test
+@Test(groups= {"Orders", "GeneralTest"})
 public void checkAllBackbuttons()
 {
 	ProductPage productPage = landingPage.loggingIn(1);
@@ -121,7 +121,7 @@ public void checkAllBackbuttons()
 	Assert.assertTrue(currentBrowserTitleProductsPageAgain.equalsIgnoreCase("products"));
 }
 
-@Test
+@Test(groups= {"Orders", "Textboxes", "GeneralTest"})
 public void checkoutTextboxesBasicCheck()
 {
 	ProductPage productPage = landingPage.loggingIn(1);
@@ -134,7 +134,7 @@ public void checkoutTextboxesBasicCheck()
 	
 }
 
-@Test
+@Test(groups= {"Textboxes", "GeneralTest"})
 public void checkoutTexboxesFullCheck() throws InterruptedException
 {
 	SoftAssert softAssert = new SoftAssert();

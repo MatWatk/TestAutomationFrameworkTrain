@@ -33,8 +33,8 @@ public static LandingPage landingPage;
 		}
 		else if (browserName.equalsIgnoreCase("edge"))
 		{
-			//Update direction of Edge Driver to your own path
-			System.setProperty("webdriver.edge.driver", "C:\\Users\\User\\Desktop\\Programowanie\\edgedriver_win64\\msedgedriver.exe");
+			//Update direction of Edge Driver to your own path. Remember to download edge driver to your version of Edge.
+			System.setProperty("webdriver.edge.driver", "C://Users//mateu//OneDrive//Desktop//Programowanie//edgedriver_win32//msedgedriver.exe");
 			driver = new EdgeDriver();
 		}
 
@@ -43,7 +43,7 @@ public static LandingPage landingPage;
 		return driver;
 	}
 	
-	@BeforeMethod
+	@BeforeMethod(groups= {"GeneralTest", "Orders", "Textboxes", "ErrorValidation", "LoggingIn"})
 	public static LandingPage launchApplication() throws IOException
 	{
 		driver = initializeDriver();
@@ -52,7 +52,7 @@ public static LandingPage landingPage;
 		return landingPage;
 	}
 	
-	@AfterMethod
+	@AfterMethod(groups= {"GeneralTest", "Orders", "Textboxes", "ErrorValidation", "LoggingIn"})
 	public void closingBrowser()
 	{
 		driver.close();
