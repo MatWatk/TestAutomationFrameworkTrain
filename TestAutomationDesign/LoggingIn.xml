@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suited">
-  <test name="Testd">
+<suite name="Sauce Website Automation Test">
+	<listeners>
+		<listener class-name="MW.TestAutomationDesign.TestComponents.Listeners"/>
+	</listeners>
+  <test name="Login Page Tests">
 	      <groups>
 		<run>
 			<include name= "LoggingIn"/>

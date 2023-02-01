@@ -89,7 +89,7 @@ List <WebElement> allProductsFromCart;
 		driverDev.get("https://www.saucedemo.com/");
 		devTools.send(Emulation.setDeviceMetricsOverride(400, 634, 100, true, Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty()));
 		File src = ((TakesScreenshot)driverDev).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src, new File("C://Users//mateu//eclipse-workspace//GitDemo//TestAutomationDesign//screenshot_mobile//mobile_version_screenshot.png"));
+		FileUtils.copyFile(src, new File(System.getProperty("user.dir")+"//screenshot_mobile//mobile_version_screenshot.png"));
 		devTools.close();
 		driverDev.close();
 	}
