@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Sauce_Website_Automation_Test" class="navigator-link">
+              <span class="suite-name border-failed">Sauce Website Automation Test</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Sauce_Website_Automation_Test" class="navigator-link ">
+                    <span>C:\Users\mateu\eclipse-workspace\GitDemo\TestAutomationDesign\Textboxes.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Sauce_Website_Automation_Test" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Sauce_Website_Automation_Test" class="navigator-link ">
+                    <span>4 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Sauce_Website_Automation_Test" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Sauce_Website_Automation_Test" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Sauce_Website_Automation_Test" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Sauce_Website_Automation_Test" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Sauce_Website_Automation_Test" class="hide-methods failed suite-Sauce_Website_Automation_Test"> (hide)</a> <!-- hide-methods failed suite-Sauce_Website_Automation_Test -->
+                      <a href="#" panel-name="suite-Sauce_Website_Automation_Test" class="show-methods failed suite-Sauce_Website_Automation_Test"> (show)</a> <!-- show-methods failed suite-Sauce_Website_Automation_Test -->
+                    </span>
+                    <div class="method-list-content failed suite-Sauce_Website_Automation_Test">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Sauce_Website_Automation_Test" title="MW.TestAutomationDesign.Tests.OrderTest" class="method navigator-link" hash-for-method="checkoutTexboxesFullCheck">checkoutTexboxesFullCheck</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Sauce_Website_Automation_Test" title="MW.TestAutomationDesign.Tests.OrderTest" class="method navigator-link" hash-for-method="checkoutTextboxesBasicCheck">checkoutTextboxesBasicCheck</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Sauce_Website_Automation_Test -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Sauce_Website_Automation_Test" class="hide-methods passed suite-Sauce_Website_Automation_Test"> (hide)</a> <!-- hide-methods passed suite-Sauce_Website_Automation_Test -->
+                      <a href="#" panel-name="suite-Sauce_Website_Automation_Test" class="show-methods passed suite-Sauce_Website_Automation_Test"> (show)</a> <!-- show-methods passed suite-Sauce_Website_Automation_Test -->
+                    </span>
+                    <div class="method-list-content passed suite-Sauce_Website_Automation_Test">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Sauce_Website_Automation_Test" title="MW.TestAutomationDesign.Tests.ErrorValidation" class="method navigator-link" hash-for-method="emptyCheckoutCheck">emptyCheckoutCheck</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Sauce_Website_Automation_Test -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Sauce_Website_Automation_Test" class="panel Sauce_Website_Automation_Test">
+          <div class="suite-Sauce_Website_Automation_Test-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">MW.TestAutomationDesign.Tests.OrderTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkoutTexboxesFullCheck">
+                  </a> <!-- checkoutTexboxesFullCheck -->
+                  <span class="method-name">checkoutTexboxesFullCheck</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at MW.TestAutomationDesign.Tests.OrderTest.checkoutTexboxesFullCheck(OrderTest.java:190)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkoutTextboxesBasicCheck">
+                  </a> <!-- checkoutTextboxesBasicCheck -->
+                  <span class="method-name">checkoutTextboxesBasicCheck</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [false] but found [true]
+	at MW.TestAutomationDesign.Tests.OrderTest.checkoutTextboxesBasicCheck(OrderTest.java:133)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Sauce_Website_Automation_Test-class-failed -->
+          <div class="suite-Sauce_Website_Automation_Test-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">MW.TestAutomationDesign.Tests.ErrorValidation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="emptyCheckoutCheck">
+                  </a> <!-- emptyCheckoutCheck -->
+                  <span class="method-name">emptyCheckoutCheck</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Sauce_Website_Automation_Test-class-passed -->
+        </div> <!-- panel Sauce_Website_Automation_Test -->
+        <div panel-name="test-xml-Sauce_Website_Automation_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\mateu\eclipse-workspace\GitDemo\TestAutomationDesign\Textboxes.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Sauce Website Automation Test&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;MW.TestAutomationDesign.TestComponents.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Textboxes Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;Textboxes&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;MW.TestAutomationDesign.Tests.LoginValidation&quot;/&gt;
+      &lt;class name=&quot;MW.TestAutomationDesign.Tests.DevToolsTests&quot;/&gt;
+      &lt;class name=&quot;MW.TestAutomationDesign.Tests.OrderTest&quot;/&gt;
+      &lt;class name=&quot;MW.TestAutomationDesign.Tests.ErrorValidation&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Textboxes Tests --&gt;
+&lt;/suite&gt; &lt;!-- Sauce Website Automation Test --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Sauce_Website_Automation_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Sauce Website Automation Test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Textboxes Tests (4 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Sauce_Website_Automation_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Sauce Website Automation Test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">ErrorValidation</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">emptyCheckoutCheck</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">GeneralTest</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkoutTexboxesFullCheck</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkoutTextboxesBasicCheck</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">emptyCheckoutCheck</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">Orders</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkoutTextboxesBasicCheck</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">Textboxes</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkoutTexboxesFullCheck</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkoutTextboxesBasicCheck</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">emptyCheckoutCheck</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Sauce_Website_Automation_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Sauce Website Automation Test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Sauce_Website_Automation_Test');
+function tableData_Sauce_Website_Automation_Test() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(3);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'checkoutTexboxesFullCheck')
+data.setCell(0, 2, 'MW.TestAutomationDesign.Tests.OrderTest')
+data.setCell(0, 3, 12421);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'checkoutTextboxesBasicCheck')
+data.setCell(1, 2, 'MW.TestAutomationDesign.Tests.OrderTest')
+data.setCell(1, 3, 1194);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'emptyCheckoutCheck')
+data.setCell(2, 2, 'MW.TestAutomationDesign.Tests.ErrorValidation')
+data.setCell(2, 3, 862);
+window.suiteTableData['Sauce_Website_Automation_Test']= { tableData: data, tableDiv: 'times-div-Sauce_Website_Automation_Test'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <div id="times-div-Sauce_Website_Automation_Test">
+              </div> <!-- times-div-Sauce_Website_Automation_Test -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Sauce_Website_Automation_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Sauce Website Automation Test</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Sauce_Website_Automation_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">9 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">MW.TestAutomationDesign.Tests.LoginValidation</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">manuaLoggingInTest</span>
+                <br/>
+                <span class="ignored-method-name">LogOnSelectedUserFromDatabase</span>
+                <br/>
+                <span class="ignored-method-name">logOnAllUsers</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">MW.TestAutomationDesign.Tests.ErrorValidation</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">loginErrorValidation</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">MW.TestAutomationDesign.Tests.OrderTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">cartCheck</span>
+                <br/>
+                <span class="ignored-method-name">orderTest</span>
+                <br/>
+                <span class="ignored-method-name">checkAllBackbuttons</span>
+                <br/>
+                <span class="ignored-method-name">emptyCartCheckoutCheck</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">MW.TestAutomationDesign.Tests.DevToolsTests</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">websiteOnDifferentDeviceSize</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Sauce_Website_Automation_Test" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">MW.TestAutomationDesign.Tests.OrderTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkoutTexboxesFullCheck</span>
+                <span class="method-start">2756 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closingBrowser</span>
+                <span class="method-start">15400 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">15530 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkoutTextboxesBasicCheck</span>
+                <span class="method-start">16758 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closingBrowser</span>
+                <span class="method-start">18117 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">MW.TestAutomationDesign.Tests.ErrorValidation</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">34402 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">emptyCheckoutCheck</span>
+                <span class="method-start">35464 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closingBrowser</span>
+                <span class="method-start">36326 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
