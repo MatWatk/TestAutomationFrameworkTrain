@@ -28,8 +28,8 @@ public static LandingPage landingPage;
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "//src//main//java//MW//Resources//GlobalData.properties");
 		prop.load(fis);
-		//String browserName = System.getProperty("browser") != null ? System.getProperty("browser") : prop.getProperty("browser");
-		String browserName = prop.getProperty("browser");
+		String browserName = System.getProperty("browser") != null ? System.getProperty("browser") : prop.getProperty("browser");
+		//String browserName = prop.getProperty("browser");
 		if (browserName.equalsIgnoreCase("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
@@ -37,8 +37,8 @@ public static LandingPage landingPage;
 		}
 		else if (browserName.equalsIgnoreCase("edge"))
 		{
-			//Update direction of Edge Driver to your own path. Remember to download edge driver to your version of Edge.
-			System.setProperty("webdriver.edge.driver", "C://Users//mateu//OneDrive//Desktop//Programowanie//edgedriver_win32//msedgedriver.exe");
+			//Make sure you're Edge driver is version 109.0.1518.70, if not - replace driver according to your Edge version
+			System.setProperty("webdriver.edge.driver", System.getProperty("user.dir")+"//edgedriver_win32//msedgedriver.exe");
 			driver = new EdgeDriver();
 		}
 
